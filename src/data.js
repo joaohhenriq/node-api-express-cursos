@@ -19,4 +19,10 @@ function getCursos(){
     return Object.values(cursos)
 }
 
-module.exports = { salvarCurso, getCurso, getCursos }
+function excluirCurso(id){
+    const curso = cursos[id]
+    delete cursos[id]
+    return curso
+}
+
+module.exports = { salvarCurso, getCurso, getCursos, excluirCurso }
